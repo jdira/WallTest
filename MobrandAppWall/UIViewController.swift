@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController{
     static func instanceWithDefaultNib() -> Self {
         let className = NSStringFromClass(self as! AnyClass).componentsSeparatedByString(".").last
-        let bundle = NSBundle(forClass: self as! AnyClass)
+        let bundle = NSBundle(forClass: UIViewController.self)
         return self.init(nibName: className, bundle: bundle)
     }
     
