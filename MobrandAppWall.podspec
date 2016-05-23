@@ -15,4 +15,9 @@ s.source       = { :git => "https://github.com/mobrandtech/mobrand-ios-sdk.git",
 s.source_files  = "MobrandAppWall"
 s.dependency 'jdjCore' 
 s.requires_arc = true
+
+s.resource_bundles = {
+'Resources' => ['MobrandAppWall/*.{xib}']
+}
+
 end
