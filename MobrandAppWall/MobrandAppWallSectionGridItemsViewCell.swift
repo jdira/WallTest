@@ -78,15 +78,15 @@ public class MobrandAppWallSectionGridItemsViewCell: UITableViewCell,UICollectio
 //        gridView.reloadData()
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    public func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ads.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
          let cell : GridItemViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(self.cellIdentifier, forIndexPath: indexPath) as! GridItemViewCell
          let item: AppWallAd = self.ads[indexPath.row]
          cell.modelChange(item, progresBarColor: self.progressBarColor)
@@ -94,7 +94,7 @@ public class MobrandAppWallSectionGridItemsViewCell: UITableViewCell,UICollectio
     }
     
     
-    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+    public func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
 //         CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformTilt, andDuration: 1)
     }
     
@@ -102,7 +102,7 @@ public class MobrandAppWallSectionGridItemsViewCell: UITableViewCell,UICollectio
         return ViewCellUtils.sharedInstance.colectionViewSize
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     }
     
     

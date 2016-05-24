@@ -70,10 +70,10 @@ public class GridItemViewCell: UICollectionViewCell, MobrandClickDelegate {
         layer.cornerRadius = 5.0
     }
     
-    func  onMobrandClickReady() {
+    public func  onMobrandClickReady() {
         progressBar.hidden = true
     }
-    func onMobrandClickError(error: String) {
+    public func onMobrandClickError(error: String) {
         progressBar.hidden = true
     }
     
