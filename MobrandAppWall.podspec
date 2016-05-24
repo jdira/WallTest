@@ -17,7 +17,7 @@ s.dependency 'jdjCore'
 s.requires_arc = true
 
 s.resource_bundles = {
-'s' => ['MobrandAppWall/*.{xib,png}']
+'MyFramework' => ['MobrandAppWall/*.{xib,png}']
 }
 
 end
