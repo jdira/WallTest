@@ -79,8 +79,8 @@ class AppWallContentViewController: UIViewController, UITableViewDataSource, UIT
             
             let sectionModel: SectionModel = pageModel.sections[row / 2]!
             if(row % 2 == 0){
-                let sectionTitleCell = tableView.dequeueReusableCellWithIdentifier(sectionGridItemsIdentifier, forIndexPath: indexPath) as! MobrandAppWallSectionGridItemsViewCell;
-//                sectionTitleCell.modelChange(sectionModel.title)
+                let sectionTitleCell = tableView.dequeueReusableCellWithIdentifier(sectionGridItemsIdentifier, forIndexPath: indexPath) as! MobrandAppWallSectionNameViewCell;
+                sectionTitleCell.modelChange(sectionModel.title)
                 return sectionTitleCell;
             } else {
                 let sectionTitleCell = tableView.dequeueReusableCellWithIdentifier(sectionGridItemsIdentifier, forIndexPath: indexPath) as! MobrandAppWallSectionGridItemsViewCell;
