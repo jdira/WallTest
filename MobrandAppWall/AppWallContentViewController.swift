@@ -51,26 +51,10 @@ class AppWallContentViewController: UIViewController, UITableViewDataSource, UIT
     
     func registerNib(){
         tableView.rowHeight = UITableViewAutomaticDimension
-        let frameworkBundle = BundleUtils.getBundle(AppWallContentViewController.self)
+        let frameworkBundle = NSBundle(forClass: AppWallContentViewController.self)
         tableView.registerNib(UINib(nibName: sectionNameIdentifier, bundle: frameworkBundle), forCellReuseIdentifier: sectionNameIdentifier)
         tableView.registerNib(UINib(nibName: sectionGridItemsIdentifier, bundle: frameworkBundle), forCellReuseIdentifier: sectionGridItemsIdentifier)
         tableView.registerNib(UINib(nibName: appWallBrandViewCellIdentifier, bundle: frameworkBundle), forCellReuseIdentifier: appWallBrandViewCellIdentifier)
-    }
-    
-    private func initNibs(){
-            let frameworkBundle = BundleUtils.getBundle(AppWallContentViewController.self)
-            for i in 0 ..< (self.pageModel.sections.count * 2) {
-                let sectionModel: SectionModel = self.pageModel.sections[i / 2]!
-                if(i % 2 == 0){
-                    let cell = UINib(nibName: self.sectionNameIdentifier,bundle: frameworkBundle).instantiateWithOwner(nil, options: nil)[0] as! MobrandAppWallSectionNameViewCell
-                    cell.modelChange(sectionModel.title)
-                    self.cells.updateValue(cell, forKey: i)
-                } else {
-                    let cell = UINib(nibName: self.sectionGridItemsIdentifier,bundle: frameworkBundle).instantiateWithOwner(nil, options: nil)[0] as! MobrandAppWallSectionGridItemsViewCell
-                    cell.modelChange(sectionModel.list, progressBarColor: self.getProgresBarColor())
-                    self.cells.updateValue(cell, forKey: i)
-                }
-            }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
