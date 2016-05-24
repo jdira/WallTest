@@ -191,7 +191,7 @@ class AppWallViewController: UIViewController, AppWallAdsDelegate,  UIPageViewCo
             return nil
         }
         // Create a new view controller and pass suitable data.
-        let pageContentViewController = AppWallContentViewController.instanceWithDefaultNib()
+        let pageContentViewController = AppWallContentViewController.instanceWithDefaultNib(AppWallViewController.self)
         pageContentViewController.pageIndex = index
         currentIndex = index
         pageContentViewController.pageModel = pageModel

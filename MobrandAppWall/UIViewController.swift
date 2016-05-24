@@ -9,9 +9,12 @@
 import UIKit
 
 extension UIViewController{
-    static func instanceWithDefaultNib() -> Self {
+    static func instanceWithDefaultNib(aClass: AnyClass) -> Self {
         let className = NSStringFromClass(self as! AnyClass).componentsSeparatedByString(".").last
-        let bundle = NSBundle(forClass: UIViewController.self)
+        let podBundle = NSBundle(forClass: aClass)
+        let bundleURL = podBundle.URLForResource("Resources", withExtension: "bundle")
+        let bundle = NSBundle(URL: bundleURL!)!
+        
         return self.init(nibName: className, bundle: bundle)
     }
     

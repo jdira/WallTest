@@ -20,7 +20,7 @@ public class MobrandAppWallFactory: NSObject{
     
     
     public  func createAppWall(parent: UIViewController, placementId: String){
-            let controller: AppWallViewController = AppWallViewController.instanceWithDefaultNib()
+            let controller: AppWallViewController = AppWallViewController.instanceWithDefaultNib(MobrandAppWallFactory.self)
             controller.parent = parent
             parent.presentViewController(controller, animated: true, completion: nil)
     }
