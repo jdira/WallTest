@@ -51,14 +51,14 @@ class AppWallContentViewController: UIViewController, UITableViewDataSource, UIT
     
     func registerNib(){
         tableView.rowHeight = UITableViewAutomaticDimension
-        let frameworkBundle = NSBundle(forClass: AppWallContentViewController.self)
+        let frameworkBundle = BundleUtils.getBundle(AppWallContentViewController.self)
         tableView.registerNib(UINib(nibName: sectionNameIdentifier, bundle: frameworkBundle), forCellReuseIdentifier: sectionNameIdentifier)
         tableView.registerNib(UINib(nibName: sectionGridItemsIdentifier, bundle: frameworkBundle), forCellReuseIdentifier: sectionGridItemsIdentifier)
         tableView.registerNib(UINib(nibName: appWallBrandViewCellIdentifier, bundle: frameworkBundle), forCellReuseIdentifier: appWallBrandViewCellIdentifier)
     }
     
     private func initNibs(){
-            let frameworkBundle = NSBundle(forClass: AppWallContentViewController.self)
+            let frameworkBundle = BundleUtils.getBundle(AppWallContentViewController.self)
             for i in 0 ..< (self.pageModel.sections.count * 2) {
                 let sectionModel: SectionModel = self.pageModel.sections[i / 2]!
                 if(i % 2 == 0){
