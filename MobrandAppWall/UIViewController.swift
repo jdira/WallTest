@@ -23,7 +23,7 @@ class BundleUtils {
     
     
     class func getBundle(aClass: AnyClass) ->NSBundle!{
-        let podBundle = NSBundle(forClass: self as AnyClass)
+        let podBundle = NSBundle(forClass: aClass)
         let bundleURL = podBundle.URLForResource("MyFramework", withExtension: "bundle")
         return NSBundle(URL: bundleURL!)!
         
