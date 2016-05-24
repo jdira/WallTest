@@ -67,8 +67,7 @@ class AppWallContentViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     @objc func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return pageModel.sections.count * 2 + 1
-        return 1
+        return pageModel.sections.count * 2 + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
