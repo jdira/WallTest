@@ -51,13 +51,13 @@ class AppWallContentViewController: UIViewController, UITableViewDataSource, UIT
     
     func registerNib(){
         tableView.rowHeight = UITableViewAutomaticDimension
-        let frameworkBundle = BundleUtils.getBundle(AppWallViewController.self)
+        let frameworkBundle = BundleUtils.getBundle(AppWallContentViewController.self)
         
         
        // let cellNib = UINib(nibName: "OurCell", bundle: bundle)
         //tableView.registerNib(cellNib, forCellReuseIdentifier: "OurCell")
         
-        tableView.registerNib(UINib(nibName: sectionNameIdentifier, bundle: frameworkBundle), forCellReuseIdentifier: sectionNameIdentifier)
+        tableView.registerNib(UINib(nibName: sectionNameIdentifier, bundle: NSBundle(forClass: MobrandAppWallSectionNameViewCell.self)), forCellReuseIdentifier: sectionNameIdentifier)
         tableView.registerNib(UINib(nibName: sectionGridItemsIdentifier, bundle: frameworkBundle), forCellReuseIdentifier: sectionGridItemsIdentifier)
         tableView.registerNib(UINib(nibName: appWallBrandViewCellIdentifier, bundle: frameworkBundle), forCellReuseIdentifier: appWallBrandViewCellIdentifier)
     }
