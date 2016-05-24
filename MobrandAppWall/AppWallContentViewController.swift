@@ -80,7 +80,7 @@ class AppWallContentViewController: UIViewController, UITableViewDataSource, UIT
             
             let sectionModel: SectionModel = pageModel.sections[row / 2]!
             if(row % 2 == 0){
-                let sectionTitleCell = tableView.dequeueReusableCellWithIdentifier(sectionGridItemsIdentifier, forIndexPath: indexPath) as! MobrandAppWallSectionNameViewCell;
+                let sectionTitleCell = tableView.dequeueReusableCellWithIdentifier(sectionNameIdentifier, forIndexPath: indexPath) as! MobrandAppWallSectionNameViewCell;
                 sectionTitleCell.modelChange(sectionModel.title)
                 return sectionTitleCell;
             } else {
