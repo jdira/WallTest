@@ -17,7 +17,7 @@ public class GridItemViewCell: UICollectionViewCell, MobrandClickDelegate {
     @IBOutlet weak var progressBar: UIProgressView!
     var webView: UIWebView!
     var progressBarTimer:NSTimer!
-    let mobrandCore = MobrandCore.getMobrandCoreInstance("UeEOB063TaC_-BlZsAF-RA")
+    let mobrandCore =  MobrandCore.getInstance()
     
     
     override public func awakeFromNib() {

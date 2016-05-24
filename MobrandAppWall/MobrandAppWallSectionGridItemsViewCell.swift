@@ -54,7 +54,7 @@ public class MobrandAppWallSectionGridItemsViewCell: UITableViewCell,UICollectio
         gridView.delegate = self
         gridView.dataSource = self
         backgroundColor = UIColor(rgba: AppWallColors.APP_WALL_BG)
-        let frameworkBundle = BundleUtils.getBundle(MobrandAppWallSectionGridItemsViewCell.self)
+        let frameworkBundle = BundleUtils.getBundle()
         self.gridView.registerNib(UINib(nibName: cellIdentifier, bundle: frameworkBundle), forCellWithReuseIdentifier: cellIdentifier)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppWallContentViewController.rotated), name: UIDeviceOrientationDidChangeNotification, object: nil)
     }
