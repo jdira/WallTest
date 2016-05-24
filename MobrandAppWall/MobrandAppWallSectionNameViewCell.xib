@@ -31,9 +31,6 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-            <connections>
-                <outlet property="txtTitle" destination="cwb-1j-PiX" id="gY4-RD-3Se"/>
-            </connections>
             <point key="canvasLocation" x="88" y="438.5"/>
         </tableViewCell>
     </objects>

@@ -22,7 +22,7 @@ class MobrandAppWallSectionNameViewCell: UITableViewCell {
  }
     
     func modelChange(title: String){
-        txtTitle.text = title
+     //   txtTitle.text = title
     }
     
 }
