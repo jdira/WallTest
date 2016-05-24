@@ -42,14 +42,14 @@ class ViewCellUtils {
 }
 
 
-class MobrandAppWallSectionGridItemsViewCell: UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate {
+public class MobrandAppWallSectionGridItemsViewCell: UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var gridView: UICollectionView!
     let cellIdentifier = "GridItemViewCell"
     var ads: [AppWallAd] =  [AppWallAd]()
     var progressBarColor: UIColor!
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         gridView.delegate = self
         gridView.dataSource = self
@@ -59,7 +59,7 @@ class MobrandAppWallSectionGridItemsViewCell: UITableViewCell,UICollectionViewDa
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppWallContentViewController.rotated), name: UIDeviceOrientationDidChangeNotification, object: nil)
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override public func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     

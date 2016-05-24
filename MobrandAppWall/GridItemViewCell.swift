@@ -9,7 +9,7 @@
 import UIKit
 import MobrandCore
 
-class GridItemViewCell: UICollectionViewCell, MobrandClickDelegate {
+public class GridItemViewCell: UICollectionViewCell, MobrandClickDelegate {
     var ad: AppWallAd!
     let myCache = ImageCache(name: "MobrandAppWall")
     @IBOutlet weak var txtTitle: UILabel!
@@ -20,7 +20,7 @@ class GridItemViewCell: UICollectionViewCell, MobrandClickDelegate {
     let mobrandCore = MobrandCore.getMobrandCoreInstance("UeEOB063TaC_-BlZsAF-RA")
     
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GridItemViewCell.onClick(_:)))
         self.addGestureRecognizer(tapGestureRecognizer)
