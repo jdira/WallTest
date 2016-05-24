@@ -51,7 +51,7 @@ class AppWallContentViewController: UIViewController, UITableViewDataSource, UIT
     
     func registerNib(){
         tableView.rowHeight = UITableViewAutomaticDimension
-        let frameworkBundle = BundleUtils.getBundle(AppWallContentViewController.self)
+        let frameworkBundle = BundleUtils.getBundle(AppWallViewController.self)
         
         
        // let cellNib = UINib(nibName: "OurCell", bundle: bundle)
