@@ -21,13 +21,6 @@ class MobrandAppWallSectionNameViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
  }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        txtTitle.setNeedsLayout()
-        txtTitle.layoutIfNeeded()
-    }
-
-    
     func modelChange(title: String){
         txtTitle.text = title
     }
